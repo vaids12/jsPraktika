@@ -153,7 +153,7 @@
 
 
 // . Raskite keturženklius skaičius, kurių pirmasis skaitmuo yra lyginis, o skaičius nesidalina iš 998 ?
-// console.log(" ------------------------------13 uzduotis -------------------------")
+console.log(" ------------------------------13 uzduotis -------------------------")
 
 // let i;
 // function numbers(){
@@ -165,7 +165,7 @@
 // }
 // numbers();
 
-// console.log(" ------------------------------14 uzduotis -------------------------")
+console.log(" ------------------------------14 uzduotis -------------------------")
 
 // Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra
 // keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600
@@ -187,7 +187,7 @@
 
 // leapYear();
 
-// console.log(" ------------------------------15 uzduotis -------------------------")
+console.log(" ------------------------------15 uzduotis -------------------------")
 // Norėdami paskatinti žmones naudotis visuomeniniu miesto transportu, savivaldybės
 // tarnautojai sugalvojo, kad bilietai, kurie baigiasi lyginiu skaitmeniu, kainuos perpus
 // pigiau. Bilietai, kurie baigiasi nuliu, parduodami be nuolaidos. Parenkite programą,
@@ -208,7 +208,7 @@
 // }
 // tikets(997,1003);
 
-// console.log(" ------------------------------16 uzduotis -------------------------")
+console.log(" ------------------------------16 uzduotis -------------------------")
 // Norėdami paskatinti žmones naudotis visuomeniniu miesto transportu, savivaldybės
 // tarnautojai sugalvojo, kad bilietai, kurie baigiasi lyginiu skaitmeniu, kainuos perpus
 // pigiau. Bilietai, kurie baigiasi nuliu, parduodami be nuolaidos. Parenkite programą,
@@ -228,13 +228,13 @@
 
 
 
-// console.log(" ------------------------------17 uzduotis -------------------------")
+console.log(" ------------------------------17 uzduotis -------------------------")
 // // Duotas natūralusis skaičius n. Raskite skaitmenų sumą.
 
 // let sum = 0;
 // let i=1;
 // let n1=1;
-    
+
 
 
 // function number(n) {
@@ -277,15 +277,83 @@
 
 // 20 Bankas moka indėlininkui p (p>0) procentų palūkanų per metus. Parašykite programą,
 // kuri apskaičiuotų, po kiek metų šimto eurų indėlis taps didesnis už 100000
+console.log(" ------------------------------20 uzduotis -------------------------")
 
+// let a=0;
+// let p;
+// let i=100;
+
+// function deposit (p){
+//     while(i<100000){
+//         i=(i+i*(p/100));   
+//         a=a+1;
+//     }console.log("  100 eurų taps 100000 per " +a+ " metų " );
+
+// }
+
+// deposit(7)
+
+console.log(" ------------------------------21 uzduotis -------------------------")
 // 21. Ežere pražydo viena lelija. Kiekvieną dieną žiedų skaičius padvigubėdavo. Parašykite
 // programą, kuri apskaičiuotų:
 // a. Kiek žiedų buvo po n dienų
 // b. Kelintą dieną žiedai užklojo pusę ežero, jeigu visame ežere gali tilpti m žiedų
 
+// let a=1;
+// let n;
+// let m;
+// let i=0
+
+
+// function lake (n){
+//   for( i=0; i<n; i++){
+//         a=(a*2);
+
+
+//         console.log(a);
+
+//     }console.log(" Po " +n+ " dienų , žiedų buvo "+ a);
+// }
+
+// function hLake(m){
+//     console.log("Pusę ežero užklojo per " +(m-1) + " dienų")
+// }
+
+// lake (15)
+
+
+
+
+
+console.log(" ------------------------------22 uzduotis -------------------------")
 // 22. Pavasarį pradėjęs dirbti sode sodininkas pirmąją dieną išgenėjo m1, antrąją – m medžių
 // daugiau negu pirmąją, trečiąją – m medžių daugiau negu antrąją ir t.t. Parašykite
 // programą, skaičiuojančią, kiek dienų d dirbs sodininkas, kol išgenės n sode augančių
 // medžių. Paskutinei dienai gali likti mažiau medžių. Visi duomenys yra sveikojo tipo.
 // Pasitikrinkite: kai m1 = 3, m = 1, n = 16, tuomet kompiuterio ekrane turi būti rodoma:
 // Sodininkas dirbs 4 dienas
+
+
+let m1;
+let m;
+let n;
+let i;
+let a = 1;
+
+
+
+function day(m1, m, n) {
+    if (n > m1) {
+        let i = m1
+        while (i < n) {
+            i = i + (m1 + m);
+            m1 = (m1 + m);
+            a = (a + 1);
+
+        }
+        console.log(" Sodininkas dirbs " + a + " dienas");
+    } else {
+        console.log(" Sodininkas dirbs 1 diena");
+    }
+}
+day(3, 1, 26);
