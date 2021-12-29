@@ -3,7 +3,7 @@
 // //1 uzdavinys. naudojant ciklą atspausdinti penkias eilutes ‘Labas’;
 
 // console.log("-----------------------1 uzduotis----------------------------")
-// for (let i = 1; i < 6; i++) {
+// for (let i = 0; i < 5; i++) {
 //     console.log("Labas");
 // }
 
@@ -20,7 +20,7 @@
 
 
 
-// for (let i = 0; i < 51; i += 10) {
+// for (let i = 0; i < 50; i += 10) {
 //     console.log(i)
 // }
 
@@ -48,8 +48,8 @@
 
 
 // for (let i = 0; i < 5; i++) {
-//     let a = Math.floor(Math.random() * 11)
-//     console.log(a)
+//     let a = Math.floor(Math.random() * 11);
+//     console.log(a);
 // }
 
 
@@ -70,7 +70,7 @@
 
 // let z;
 // let sum=0;
-// while(sum<100){
+// while(sum <= 100){
 //    z = Math.floor(Math.random() * 11)
 //    sum=sum+z
 //    console.log(z)
@@ -96,15 +96,14 @@
 // console.log("Prisuko " + a + " ciklu")
 
 
-// console.log(" ------------------------------10 uzduotis -------------------------")
+console.log(" ------------------------------10 uzduotis -------------------------")
 // Vienas colis yra 2,54 cm. Sudarykite programą kuri pateiktų ekrane lentelę nuo 1 iki n
 // centimetrus coliais ir atvirkščiai
 
 // function inch(n) {
 //     for (let i = 1; i <= n; i++) {
 //         console.log(i + " colis " + (i * 2.54) + " centimetru");
-//         let d=i/2.54 
-//         console.log(i + " centimetru  " + d.toFixed(2)  + " colis ");
+//         console.log(i + " centimetru  " +(i/2.54).toFixed(2)  + " colis ");
 //     }
 // }
 
@@ -117,11 +116,10 @@
 
 // let sum = 100;
 // let i;
-// let d = 0;
+
 
 // function deposit(n) {
 //     for (let i = 1; i <= n; i++) {
-
 //         console.log(i + " metai " + ((sum * 0.02).toFixed(2)) + " Eurų palūkanų. Indėlis " + (sum +(sum * 0.02)).toFixed(2)+" Eurų");
 //         sum =parseFloat((sum + (sum * 0.02)).toFixed(2)) 
 //     }
@@ -206,24 +204,20 @@ console.log(" ------------------------------15 uzduotis ------------------------
 //         console.log("Neteisingi bilietų numeriai");
 //     }
 // }
-// tikets(997,1003);
+// tikets(997, 1003);
 
 console.log(" ------------------------------16 uzduotis -------------------------")
-// Norėdami paskatinti žmones naudotis visuomeniniu miesto transportu, savivaldybės
-// tarnautojai sugalvojo, kad bilietai, kurie baigiasi lyginiu skaitmeniu, kainuos perpus
-// pigiau. Bilietai, kurie baigiasi nuliu, parduodami be nuolaidos. Parenkite programą,
-// spausdinančią visų bilietų, kurie kainuos pigiau, numerius. Bilietai pradedami numeruoti
-// nuo m-tojo, baigiami n-tuoju. Kai m = 997, o n = 1003, tuomet turi būti rodomi tokie
-// bilietų numeriai: 998 1002
+// Duotas natūralus skaičius n. Raskite pirmą skaitmenį
 
 
 
 // function number(n) {
 //     while (n > 9) {
-//         n = ((Math.floor(n/10)));
-//     }console.log( "  Pirmas skaitmuo " + n)   ;
+//         n = ((Math.floor(n / 10)));
+//     }
+//     console.log("  Pirmas skaitmuo " + n);
 // }
-// number(1038);
+// number(538);
 
 
 
@@ -231,101 +225,147 @@ console.log(" ------------------------------16 uzduotis ------------------------
 console.log(" ------------------------------17 uzduotis -------------------------")
 // // Duotas natūralusis skaičius n. Raskite skaitmenų sumą.
 
-// let sum = 0;
-// let i=1;
-// let n1=1;
-
-
 
 // function number(n) {
-//     while (i > 0) {
-//         i = ((Math.floor(n/n1)) % 10);
+//     let sum = 0;
+//     let i;
+
+//     while (n > 0) {
+//         i = n % 10;
+//         n = Math.floor(n / 10);
 //         sum = sum + i;
-//         n1=(n1*10)   
 //     }
-//     console.log("Skaicius "+n+ ", Skaitmenų suma " + sum)
+//     console.log(" Skaitmenų suma " + sum)
 // }
 
-
-
-// number(25556);
+// number(2345);
 
 
 // console.log(" ------------------------------18 uzduotis -------------------------")
-// Duotas natūralusis skaičius n. Raskite skaitmenų sumą.
+// // Duotas natūralusis skaičius n. Raskite atvirkščią skaičių duotajam. Pvz.: n=123, atv =321
+
+
+// let n;
+
+// function number(n) {
+//     let i;
+//     let sum = 0;
+//     let z = n;
+
+//     while (n > 0) {
+//         i = n % 10;
+//         n = Math.floor(n / 10);
+//         sum = (sum * 10 + i);
+//     }
+//     console.log(" n= " + z + " atv= " + sum)
+// }
+
+// number(1323)
+
 
 // let n;
 // let nNew;
 // let nReverse;
 
-
 // function number(n){
 //     nString= n.toString();
 //     nReverse = nString.split("").reverse().join("");
 //     nNew = parseInt(nReverse);
-
 //     console.log("n =  "+n+", atv. = "+nNew);
-
 // }
-
-// number(251)
 
 
 // console.log(" ------------------------------19 uzduotis -------------------------")
 // 19. Duotas natūralus skaičius n. Sudarykite programą, kuri rastų didžiausią ir mažiausią
 // skaitmenį.
 
-// 20 Bankas moka indėlininkui p (p>0) procentų palūkanų per metus. Parašykite programą,
-// kuri apskaičiuotų, po kiek metų šimto eurų indėlis taps didesnis už 100000
-console.log(" ------------------------------20 uzduotis -------------------------")
+//  let n;
 
-// let a=0;
-// let p;
-// let i=100;
+// function number(n) {
+//     let i;
+//     let d = 0;
+//     let m = 9;
 
-// function deposit (p){
-//     while(i<100000){
-//         i=(i+i*(p/100));   
-//         a=a+1;
-//     }console.log("  100 eurų taps 100000 per " +a+ " metų " );
-
+//     let z = n;
+//     while (n > 0) {
+//         i = n % 10;
+//         n = Math.floor(n / 10)
+//         if (d <= i) {
+//             d = i;
+//         }
+//         if (m >= i) {
+//             m = i
+//         }
+//     }
+//     console.log("Skaičius " + z + ". Didžiausias skaitmuo " + d + ", Mažiausias skaitmuo " + m)
 // }
 
-// deposit(7)
+// number(18138)
 
-console.log(" ------------------------------21 uzduotis -------------------------")
+
+// 20 Bankas moka indėlininkui p (p>0) procentų palūkanų per metus. Parašykite programą,
+// kuri apskaičiuotų, po kiek metų šimto eurų indėlis taps didesnis už 100000
+// console.log(" ------------------------------20 uzduotis -------------------------")
+
+// let p;
+
+// function deposit(p) {
+//     let sum = 0;
+//     let i = 100;
+
+//     while (i < 100000) {
+//         i = (i + i * (p / 100));
+//         sum++;
+//     }
+//     console.log("  100 eurų,  gaunant " + p + "% palūkanų per metus, taps 100000  eurų per " + sum + " metų ");
+// }
+
+// deposit(5)
+
+
+
+
+// console.log(" ------------------------------21 uzduotis -------------------------")
 // 21. Ežere pražydo viena lelija. Kiekvieną dieną žiedų skaičius padvigubėdavo. Parašykite
 // programą, kuri apskaičiuotų:
 // a. Kiek žiedų buvo po n dienų
 // b. Kelintą dieną žiedai užklojo pusę ežero, jeigu visame ežere gali tilpti m žiedų
 
-// let a=1;
-// let n;
-// let m;
-// let i=0
+// 
+
+// let n=5;
+// let z = 1;
 
 
-// function lake (n){
-//   for( i=0; i<n; i++){
-//         a=(a*2);
-
-
-//         console.log(a);
-
-//     }console.log(" Po " +n+ " dienų , žiedų buvo "+ a);
+// if (n > 0) {
+//     for (i = 1; i < n; i++) {
+//         z = (z* 2);
+//     }
+//     console.log("a. Po " + (n) + " dienų , žiedų bus " + a);
 // }
 
-// function hLake(m){
-//     console.log("Pusę ežero užklojo per " +(m-1) + " dienų")
+// let m= 16 ;
+
+
+// let d = 0;
+
+// if (m > 0) {
+//     while ( m > 1) {
+//         m = (m / 2);
+//         d++;
+//     }
+//     console.log("b. Pusę ežero užklojo per " + (d) + " dienų")
 // }
 
-// lake (15)
 
 
 
 
 
-console.log(" ------------------------------22 uzduotis -------------------------")
+
+
+
+// console.log(" ------------------------------22 uzduotis -------------------------")
 // 22. Pavasarį pradėjęs dirbti sode sodininkas pirmąją dieną išgenėjo m1, antrąją – m medžių
 // daugiau negu pirmąją, trečiąją – m medžių daugiau negu antrąją ir t.t. Parašykite
 // programą, skaičiuojančią, kiek dienų d dirbs sodininkas, kol išgenės n sode augančių
@@ -334,26 +374,25 @@ console.log(" ------------------------------22 uzduotis ------------------------
 // Sodininkas dirbs 4 dienas
 
 
-let m1;
-let m;
-let n;
-let i;
-let a = 1;
+// let m1;
+// let m;
+// let n;
 
 
+// function day(m1, m, n) {
+//  let i;
+// let a = 1;
 
-function day(m1, m, n) {
-    if (n > m1) {
-        let i = m1
-        while (i < n) {
-            i = i + (m1 + m);
-            m1 = (m1 + m);
-            a = (a + 1);
-
-        }
-        console.log(" Sodininkas dirbs " + a + " dienas");
-    } else {
-        console.log(" Sodininkas dirbs 1 diena");
-    }
-}
-day(3, 1, 26);
+//     if (n > m1) {
+//         let i = m1
+//         while (i < n) {
+//             i = i + (m1 + m);
+//             m1 = (m1 + m);
+//             a ++;
+//         }
+//         console.log(" Sodininkas dirbs " + a + " dienas");
+//     } else {
+//         console.log(" Sodininkas dirbs 1 diena");
+//     }
+// }
+// day(3, 1, 16);
